@@ -1,0 +1,29 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+      <form [formGroup]="annonceForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>title</label>
+          <input class="form-control" type="text" formControlName="title" required>
+        </div>
+
+        <div class="form-group">
+          <label>description</label>
+          <input class="form-control" type="text" formControlName="description" required>
+        </div>
+
+        <div class="form-group">
+          <label>date_ajout</label>
+          <input class="form-control" type="date" formControlName="date_ajout" required>
+        </div>
+
+        <div class="form-group">
+          <label>image</label>
+          <input class="form-control" type="text" formControlName="image" required>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">Add Annonce</button>
+        </div>
+      </form>
+  </div>
+</div>
