@@ -1,32 +1,30 @@
-<div class="container">
-  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h2 class="h2">Annonces List</h2>
-  </div>
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">title</th>
-          <th scope="col">description</th>
-          <th scope="col">date_ajout</th>
-          <!-- <th scope="col">image</th> -->
-          <th class="text-center" scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let annonce of Annonces; let i = index">
-          <th scope="row">{{annonce._id}}</th>
-          <td>{{annonce.title}}</td>
-          <td>{{annonce.description}}</td>
-          <td>{{annonce.date_ajout}}</td>
-          <!-- <td>{{annonce.image}}</td> -->
 
-          <td class="text-center">
-            <button class="btn btn-sm btn-primary" routerLink="/details/{{annonce._id}}">Edit</button>
+ <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+   <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+     <div class="col" *ngFor="let annonce of Annonces; let i = index"> <div class="card h-100 shadow-sm" >
+      <img src="{{annonce.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <div class="clearfix mb-3">
+          <span class="float-start badge rounded-pill bg-primary">{{annonce.title}}</span>
+           <span class="float-end price-hp">{{annonce.date_ajout}}</span>
+           </div>
+      <h5 class="card-title">{{annonce.description}}</h5>
+       <div class="text-center my-4">
+        <!-- <button class="btn btn-sm btn-primary" routerLink="/details/{{annonce._id}}">Edit</button> <br> -->
             <button class="btn btn-sm btn-danger" (click)="delete(annonce._id, i)">Delete</button>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+       </div>
+       </div>
+      </div>
+    </div>
+
+
+
+
+
+         </div>
+         </div>
+
+
+
+
+
